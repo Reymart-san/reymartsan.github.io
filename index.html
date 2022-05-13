@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Design using HTML AND CSS</title> 
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class = "main">
+            <nav>
+                <div class="logo">
+                    <img src="logo1.png">
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Make</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <div class="info">
+                <div class="overlay"></div>
+                <img src="main.jpg" class="me">
+                <div id="cir">
+                    <section id="home">
+                    <div class="feature o">
+                       <img src="home-regular-24.png"></a>
+                        <div>
+                            <h1>Home</h1>
+                            <p>Home Page </p>
+                        </div>
+                    </div>
+                    </section>
+                    
+                    <div class="feature n">
+                        <img src="spreadsheet-regular-24.png">
+                        <div>
+                            <h1>About</h1>
+                            <p>All about me</p>
+                        </div>
+                    </div>
+                    <div class="feature e">
+                        <img src="briefcase-regular-24.png">
+                        <div>
+                            <h1>Make</h1>
+                            <p>Sample work</p>
+                        </div>
+                    </div>
+                    <div class="feature s">
+                        <img src="envelope-regular-24.png">
+                        <div>
+                            <h1>Contact</h1>
+                            <p>Email me</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="controls">
+                <img src="chevron-up-regular-24.png" id="upBtn">
+                <h3>Feature</h3>
+                <img src="chevron-up-regular-24.png" id="downBtn">
+            </div>
+
+        </div>
+
+        <script>
+            var cir = document.getElementById("cir");
+            var upBtn = document.getElementById("upBtn");
+            var downBtn = document.getElementById("downBtn");
+            
+            var rotateValue = cir.style.transform;
+            var rotateSum;
+
+            upBtn.onclick = function(){
+                rotateSum = rotateValue + "rotate(-90deg)";
+                cir.style.transform = rotateSum;
+                rotateValue = rotateSum;
+            }
+            downBtn.onclick = function(){
+                rotateSum = rotateValue + "rotate(90deg)";
+                cir.style.transform = rotateSum;
+                rotateValue = rotateSum;
+            }
+
+
+        </script>
+
+    </body>
+</html>
